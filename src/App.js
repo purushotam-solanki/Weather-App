@@ -39,7 +39,7 @@ function App() {
 
   const fetchCities = async (city) => {
     try {
-      const res = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=6afe745133e0b13dda9586acdc8987ee`);
+      const res = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${'api_key'}`);
       return res?.data
     } catch (e) {
       throw new Error(e)
